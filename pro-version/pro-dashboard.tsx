@@ -143,7 +143,7 @@ export default function ProDashboard({ onBackToBasic, initialUser }: ProDashboar
           )}
 
           {/* Language Selector */}
-          <div className="absolute top-0 right-0 z-20">
+          <div className="absolute top-4 right-4 z-50">
             <LanguageSelector />
           </div>
 
