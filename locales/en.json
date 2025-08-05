@@ -1,4 +1,56 @@
 {
+  "onboarding": {
+    "welcome": {
+      "title": "Welcome to RitmoVital!",
+      "description": "Discover your natural cycles and optimize your daily life",
+      "explanation": "Biorhythms are natural cycles that influence your physical energy, emotional state, and intellectual capacity."
+    },
+    "personal": {
+      "title": "Personal Information",
+      "description": "We need some basic data to calculate your biorhythms"
+    },
+    "birthdate": {
+      "title": "Birth Date",
+      "description": "The exact date is crucial for calculating your personal cycles"
+    },
+    "location": {
+      "title": "Origin and Location",
+      "description": "This helps us personalize cultural recommendations"
+    },
+    "fields": {
+      "name": "Name",
+      "name_placeholder": "Your name",
+      "birth_date": "Birth Date",
+      "birth_time": "Birth Time (optional)",
+      "birth_place": "Birth Place",
+      "birth_place_placeholder": "City, Country",
+      "ethnicity": "Ethnic Origin",
+      "ethnicity_placeholder": "Select your origin"
+    },
+    "ethnicity": {
+      "latino": "Latino/Hispanic",
+      "european": "European",
+      "asian": "Asian",
+      "african": "African",
+      "other": "Other"
+    },
+    "buttons": {
+      "previous": "Previous",
+      "next": "Next",
+      "start": "Start"
+    },
+    "validation": {
+      "complete_fields": "Please complete all required fields to continue."
+    }
+  },
+  "cycles": {
+    "physical": "Physical",
+    "emotional": "Emotional",
+    "intellectual": "Intellectual",
+    "physical_days": "23 days",
+    "emotional_days": "28 days",
+    "intellectual_days": "33 days"
+  },
   "common": {
     "loading": "Loading...",
     "save": "Save",

@@ -1,4 +1,56 @@
 {
+  "onboarding": {
+    "welcome": {
+      "title": "Benvingut a RitmoVital!",
+      "description": "Descobreix els teus cicles naturals i optimitza la teva vida diària",
+      "explanation": "Els bioritmes són cicles naturals que influeixen en la teva energia física, estat emocional i capacitat intel·lectual."
+    },
+    "personal": {
+      "title": "Informació Personal",
+      "description": "Necessitem algunes dades bàsiques per calcular els teus bioritmes"
+    },
+    "birthdate": {
+      "title": "Data de Naixement",
+      "description": "La data exacta és crucial per calcular els teus cicles personals"
+    },
+    "location": {
+      "title": "Origen i Ubicació",
+      "description": "Això ens ajuda a personalitzar les recomanacions culturals"
+    },
+    "fields": {
+      "name": "Nom",
+      "name_placeholder": "El teu nom",
+      "birth_date": "Data de Naixement",
+      "birth_time": "Hora de Naixement (opcional)",
+      "birth_place": "Lloc de Naixement",
+      "birth_place_placeholder": "Ciutat, País",
+      "ethnicity": "Origen Ètnic",
+      "ethnicity_placeholder": "Selecciona el teu origen"
+    },
+    "ethnicity": {
+      "latino": "Llatí/Hispà",
+      "european": "Europeu",
+      "asian": "Asiàtic",
+      "african": "Africà",
+      "other": "Altre"
+    },
+    "buttons": {
+      "previous": "Anterior",
+      "next": "Següent",
+      "start": "Començar"
+    },
+    "validation": {
+      "complete_fields": "Si us plau, completa tots els camps requerits per continuar."
+    }
+  },
+  "cycles": {
+    "physical": "Físic",
+    "emotional": "Emocional",
+    "intellectual": "Intel·lectual",
+    "physical_days": "23 dies",
+    "emotional_days": "28 dies",
+    "intellectual_days": "33 dies"
+  },
   "common": {
     "loading": "Carregant...",
     "save": "Desar",

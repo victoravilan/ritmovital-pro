@@ -1,4 +1,56 @@
 {
+  "onboarding": {
+    "welcome": {
+      "title": "¡Bienvenido a RitmoVital!",
+      "description": "Descubre tus ciclos naturales y optimiza tu vida diaria",
+      "explanation": "Los biorritmos son ciclos naturales que influyen en tu energía física, estado emocional y capacidad intelectual."
+    },
+    "personal": {
+      "title": "Información Personal",
+      "description": "Necesitamos algunos datos básicos para calcular tus biorritmos"
+    },
+    "birthdate": {
+      "title": "Fecha de Nacimiento",
+      "description": "La fecha exacta es crucial para calcular tus ciclos personales"
+    },
+    "location": {
+      "title": "Origen y Ubicación",
+      "description": "Esto nos ayuda a personalizar las recomendaciones culturales"
+    },
+    "fields": {
+      "name": "Nombre",
+      "name_placeholder": "Tu nombre",
+      "birth_date": "Fecha de Nacimiento",
+      "birth_time": "Hora de Nacimiento (opcional)",
+      "birth_place": "Lugar de Nacimiento",
+      "birth_place_placeholder": "Ciudad, País",
+      "ethnicity": "Origen Étnico",
+      "ethnicity_placeholder": "Selecciona tu origen"
+    },
+    "ethnicity": {
+      "latino": "Latino/Hispano",
+      "european": "Europeo",
+      "asian": "Asiático",
+      "african": "Africano",
+      "other": "Otro"
+    },
+    "buttons": {
+      "previous": "Anterior",
+      "next": "Siguiente",
+      "start": "Comenzar"
+    },
+    "validation": {
+      "complete_fields": "Por favor, completa todos los campos requeridos para continuar."
+    }
+  },
+  "cycles": {
+    "physical": "Físico",
+    "emotional": "Emocional",
+    "intellectual": "Intelectual",
+    "physical_days": "23 días",
+    "emotional_days": "28 días",
+    "intellectual_days": "33 días"
+  },
   "common": {
     "loading": "Cargando...",
     "save": "Guardar",
