@@ -9,7 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Progress } from "@/components/ui/progress"
 import { Calendar, User, Globe } from "lucide-react"
 import type { UserProfile } from "@/lib/biorhythm-calculator"
-import { useTranslations } from "@/lib/use-translations"
+import { useTranslations } from "@/lib/translations-provider"
 import LanguageSelector from "@/components/ui/language-selector"
 
 interface OnboardingFlowProps {

@@ -13,7 +13,7 @@ import PeopleManager from "./components/people-manager"
 import ComparisonSelector from "./components/comparison-selector"
 import MultiBiorhythmChart from "./components/multi-biorhythm-chart"
 import PersonDetailsCard from "./components/person-details-card"
-import { useTranslations } from "@/lib/use-translations"
+import { useTranslations } from "@/lib/translations-provider"
 import {
   calculateMultiBiorhythms,
   generateCombinedRecommendations,

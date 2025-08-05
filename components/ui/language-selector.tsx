@@ -9,7 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Globe, Check } from "lucide-react"
-import { useTranslations, type Language, LANGUAGES } from "@/lib/use-translations"
+import { useTranslations, type Language, LANGUAGES } from "@/lib/translations-provider"
 
 export default function LanguageSelector() {
   const { currentLanguage, changeLanguage, getCurrentLanguageInfo } = useTranslations()

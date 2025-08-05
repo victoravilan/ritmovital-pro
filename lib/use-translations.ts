@@ -26,9 +26,15 @@ export function useTranslations() {
 
   // Load language from localStorage on mount
   useEffect(() => {
-    const savedLanguage = localStorage.getItem('biorhythm-pro-language') as Language
-    if (savedLanguage && Object.keys(LANGUAGES).includes(savedLanguage)) {
-      setCurrentLanguage(savedLanguage)
+    if (typeof window !== 'undefined') {
+      const savedLanguage = localStorage.getItem('biorhythm-pro-language') as Language
+      if (savedLanguage && Object.keys(LANGUAGES).includes(savedLanguage)) {
+        setCurrentLanguage(savedLanguage)
+      } else {
+        // Set Spanish as default and save it
+        setCurrentLanguage('es')
+        localStorage.setItem('biorhythm-pro-language', 'es')
+      }
     }
   }, [])
 
