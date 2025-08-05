@@ -34,69 +34,53 @@ export function TranslationsProvider({ children }: { children: React.ReactNode }
   const [currentLanguage, setCurrentLanguage] = useState<Language>('es')
   const [translations, setTranslations] = useState<TranslationData>({})
   const [isLoading, setIsLoading] = useState(true)
-  const [isInitialized, setIsInitialized] = useState(false)
 
-  // Initialize with Spanish translations and load saved language
+  // Initialize translations
   useEffect(() => {
-    const initializeTranslations = async () => {
+    const loadInitialTranslations = async () => {
       try {
-        // Always load Spanish first as fallback
+        // Load Spanish translations first
         const spanishResponse = await fetch('/locales/es.json')
         const spanishData = await spanishResponse.json()
         translationsCache['es'] = spanishData
+        setTranslations(spanishData)
         
-        // Check for saved language
-        let targetLanguage: Language = 'es'
+        // Check for saved language preference
         if (typeof window !== 'undefined') {
           const savedLanguage = localStorage.getItem('biorhythm-pro-language') as Language
-          if (savedLanguage && Object.keys(LANGUAGES).includes(savedLanguage)) {
-            targetLanguage = savedLanguage
-          } else {
-            localStorage.setItem('biorhythm-pro-language', 'es')
+          if (savedLanguage && savedLanguage !== 'es' && Object.keys(LANGUAGES).includes(savedLanguage)) {
+            // Load the saved language
+            try {
+              const savedResponse = await fetch(`/locales/${savedLanguage}.json`)
+              const savedData = await savedResponse.json()
+              translationsCache[savedLanguage] = savedData
+              setTranslations(savedData)
+              setCurrentLanguage(savedLanguage)
+            } catch (error) {
+              console.error(`Error loading saved language ${savedLanguage}:`, error)
+              // Keep Spanish as fallback
+            }
           }
         }
-        
-        // Load target language if different from Spanish
-        if (targetLanguage !== 'es') {
-          try {
-            const targetResponse = await fetch(`/locales/${targetLanguage}.json`)
-            const targetData = await targetResponse.json()
-            translationsCache[targetLanguage] = targetData
-            setTranslations(targetData)
-          } catch (error) {
-            console.error(`Error loading ${targetLanguage} translations, using Spanish:`, error)
-            setTranslations(spanishData)
-            targetLanguage = 'es'
-          }
-        } else {
-          setTranslations(spanishData)
-        }
-        
-        setCurrentLanguage(targetLanguage)
-        setIsInitialized(true)
       } catch (error) {
-        console.error('Error initializing translations:', error)
-        setTranslations({})
+        console.error('Error loading initial translations:', error)
       } finally {
         setIsLoading(false)
       }
     }
 
-    initializeTranslations()
+    loadInitialTranslations()
   }, [])
 
-  // Load translations when language changes (only after initialization)
+  // Load translations when language changes
   useEffect(() => {
-    if (!isInitialized) return
+    if (isLoading) return // Don't load during initial load
 
-    const loadTranslations = async () => {
-      setIsLoading(true)
-      
+    const loadLanguageTranslations = async () => {
       try {
         // Check cache first
         if (translationsCache[currentLanguage]) {
           setTranslations(translationsCache[currentLanguage])
-          setIsLoading(false)
           return
         }
 
@@ -107,23 +91,19 @@ export function TranslationsProvider({ children }: { children: React.ReactNode }
         }
         
         const data = await response.json()
-        
-        // Cache the translations
         translationsCache[currentLanguage] = data
         setTranslations(data)
       } catch (error) {
-        console.error('Error loading translations:', error)
-        // Fallback to Spanish if loading fails
-        if (currentLanguage !== 'es' && translationsCache['es']) {
+        console.error('Error loading language translations:', error)
+        // Fallback to Spanish
+        if (translationsCache['es']) {
           setTranslations(translationsCache['es'])
         }
-      } finally {
-        setIsLoading(false)
       }
     }
 
-    loadTranslations()
-  }, [currentLanguage, isInitialized])
+    loadLanguageTranslations()
+  }, [currentLanguage, isLoading])
 
   // Save language preference and update state immediately
   const changeLanguage = useCallback((newLanguage: Language) => {
