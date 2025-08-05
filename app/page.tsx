@@ -15,6 +15,7 @@ import DateSelector from "@/components/ui/date-selector"
 import RecommendationsPanel from "@/components/recommendations-panel"
 import DashboardSkeleton from "@/components/dashboard-skeleton"
 import ProDashboard from "@/pro-version/pro-dashboard"
+import LanguageSelector from "@/components/ui/language-selector"
 import {
   calculateBiorhythms,
   getBiorhythmState,
@@ -162,6 +163,11 @@ export default function BiorhythmApp() {
 
       {/* Content Container */}
       <div className="relative z-10 container mx-auto p-4 space-y-6">
+        {/* Language Selector - Top Right Corner */}
+        <div className="absolute top-4 right-4 z-50">
+          <LanguageSelector />
+        </div>
+
         {/* App Title Header */}
         <div className="text-center py-8">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-2xl">
