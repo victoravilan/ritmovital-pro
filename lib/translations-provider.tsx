@@ -33,43 +33,43 @@ let translationsCache: Record<Language, TranslationData> = {} as Record<Language
 export function TranslationsProvider({ children }: { children: React.ReactNode }) {
   const [currentLanguage, setCurrentLanguage] = useState<Language>('es')
   const [translations, setTranslations] = useState<TranslationData>({})
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
 
-  // Initialize translations
+  // Initialize with Spanish translations immediately
   useEffect(() => {
-    const loadInitialTranslations = async () => {
+    const initTranslations = async () => {
+      setIsLoading(true)
       try {
-        // Load Spanish translations first
-        const spanishResponse = await fetch('/locales/es.json')
-        const spanishData = await spanishResponse.json()
-        translationsCache['es'] = spanishData
-        setTranslations(spanishData)
+        console.log('Loading Spanish translations...')
+        const response = await fetch('/locales/es.json')
+        if (!response.ok) {
+          throw new Error('Failed to load Spanish translations')
+        }
+        const data = await response.json()
+        console.log('Spanish translations loaded:', data)
+        translationsCache['es'] = data
+        setTranslations(data)
         
-        // Check for saved language preference
+        // Check for saved language
         if (typeof window !== 'undefined') {
-          const savedLanguage = localStorage.getItem('biorhythm-pro-language') as Language
-          if (savedLanguage && savedLanguage !== 'es' && Object.keys(LANGUAGES).includes(savedLanguage)) {
-            // Load the saved language
-            try {
-              const savedResponse = await fetch(`/locales/${savedLanguage}.json`)
-              const savedData = await savedResponse.json()
-              translationsCache[savedLanguage] = savedData
-              setTranslations(savedData)
-              setCurrentLanguage(savedLanguage)
-            } catch (error) {
-              console.error(`Error loading saved language ${savedLanguage}:`, error)
-              // Keep Spanish as fallback
-            }
+          const saved = localStorage.getItem('biorhythm-pro-language') as Language
+          if (saved && saved !== 'es' && Object.keys(LANGUAGES).includes(saved)) {
+            setCurrentLanguage(saved)
           }
         }
       } catch (error) {
-        console.error('Error loading initial translations:', error)
+        console.error('Error loading translations:', error)
+        // Set fallback translations
+        setTranslations({
+          welcome: { title: "¡Bienvenido a RitmoVital!", description: "Descubre tus ciclos naturales" },
+          fields: { name: "Nombre", birth_place: "Lugar de Nacimiento", ethnicity: "Origen Étnico" }
+        })
       } finally {
         setIsLoading(false)
       }
     }
 
-    loadInitialTranslations()
+    initTranslations()
   }, [])
 
   // Load translations when language changes
@@ -117,6 +117,7 @@ export function TranslationsProvider({ children }: { children: React.ReactNode }
   const t = useCallback((key: string, fallback?: string): string => {
     // If translations are still loading, return fallback or key
     if (isLoading || !translations || Object.keys(translations).length === 0) {
+      console.log('Translations not loaded yet:', { isLoading, translations })
       return fallback || key
     }
 
@@ -127,11 +128,14 @@ export function TranslationsProvider({ children }: { children: React.ReactNode }
       if (value && typeof value === 'object' && k in value) {
         value = value[k]
       } else {
+        console.log('Translation key not found:', key, 'in', translations)
         return fallback || key
       }
     }
     
-    return typeof value === 'string' ? value : fallback || key
+    const result = typeof value === 'string' ? value : fallback || key
+    console.log('Translation result:', key, '->', result)
+    return result
   }, [translations, isLoading])
 
   // Get current language info
