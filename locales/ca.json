@@ -1,0 +1,119 @@
+{
+  "common": {
+    "loading": "Carregant...",
+    "save": "Desar",
+    "cancel": "Cancel·lar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "add": "Afegir",
+    "back": "Enrere",
+    "next": "Següent",
+    "previous": "Anterior",
+    "close": "Tancar",
+    "confirm": "Confirmar",
+    "today": "Avui",
+    "date": "Data"
+  },
+  "app": {
+    "title": "Equilibri Vital Pro - Comparació Avançada",
+    "shortTitle": "Equilibri Vital Pro",
+    "description": "Versió professional per comparar bioritmes de múltiples persones. Anàlisi grupal i recomanacions avançades.",
+    "name": "RitmeVital Pro",
+    "subtitle": "Comparació Avançada de Bioritmes",
+    "version": "Versió Professional",
+    "premium": "Premium",
+    "backToBasic": "← Versió Bàsica",
+    "createdBy": "RitmeVital Pro • Creat per Victor M.F. Avilan"
+  },
+  "tabs": {
+    "people": "Persones",
+    "details": "Detalls",
+    "comparison": "Comparació",
+    "recommendations": "Recomanacions"
+  },
+  "people": {
+    "title": "Gestió de Persones",
+    "addPerson": "Afegir Persona",
+    "noPeople": "No hi ha persones afegides",
+    "noPeopleDescription": "Afegeix persones per començar a comparar els seus bioritmes",
+    "name": "Nom",
+    "birthDate": "Data de Naixement",
+    "birthPlace": "Lloc de Naixement",
+    "color": "Color",
+    "active": "Activa",
+    "inactive": "Inactiva",
+    "maxPeopleReached": "Màxim de persones assolit",
+    "maxPeopleDescription": "Pots comparar fins a 3 persones simultàniament"
+  },
+  "details": {
+    "title": "Detalls Individuals",
+    "description": "Informació completa de tots els cicles per a cada persona activa",
+    "noActivePeople": "No hi ha persones actives",
+    "noActivePeopleDescription": "Selecciona persones a la pestanya \"Persones\" per veure els seus detalls complets",
+    "showingDataFor": "Mostrant dades per:",
+    "physical": "Físic",
+    "emotional": "Emocional",
+    "intellectual": "Intel·lectual",
+    "intuitive": "Intuïtiu",
+    "aesthetic": "Estètic",
+    "awareness": "Consciència",
+    "spiritual": "Espiritual",
+    "passion": "Passió",
+    "mastery": "Mestria",
+    "wisdom": "Saviesa"
+  },
+  "comparison": {
+    "title": "Comparació de Bioritmes (31 dies)",
+    "titleShort": "Comparació (31 dies)",
+    "description": "15 dies abans i 15 dies després de la data seleccionada.",
+    "todayMarker": "● Avui",
+    "selectedDateMarker": "● Data seleccionada",
+    "noPeopleToCompare": "No hi ha persones per comparar",
+    "noPeopleToCompareDescription": "Afegeix almenys 2 persones a la pestanya \"Persones\" per començar la comparació",
+    "needMorePeople": "Necessites més persones",
+    "needMorePeopleDescription": "Afegeix almenys una persona més per poder fer comparacions",
+    "comparisonTypes": {
+      "physical": "Físic",
+      "emotional": "Emocional",
+      "intellectual": "Intel·lectual",
+      "intuitive": "Intuïtiu",
+      "aesthetic": "Estètic",
+      "awareness": "Consciència",
+      "spiritual": "Espiritual",
+      "passion": "Passió",
+      "mastery": "Mestria",
+      "wisdom": "Saviesa"
+    }
+  },
+  "recommendations": {
+    "title": "Recomanacions Grupals",
+    "description": "Suggeriments personalitzats basats en la comparació de bioritmes del grup",
+    "noRecommendations": "No hi ha recomanacions disponibles",
+    "noRecommendationsDescription": "Afegeix persones i selecciona un tipus de comparació per veure recomanacions personalitzades"
+  },
+  "biorhythms": {
+    "cycles": {
+      "physical": "Físic",
+      "emotional": "Emocional",
+      "intellectual": "Intel·lectual",
+      "intuitive": "Intuïtiu",
+      "aesthetic": "Estètic",
+      "awareness": "Consciència",
+      "spiritual": "Espiritual",
+      "passion": "Passió",
+      "mastery": "Mestria",
+      "wisdom": "Saviesa"
+    },
+    "phases": {
+      "high": "Alt",
+      "critical": "Crític",
+      "low": "Baix",
+      "rising": "Ascendent",
+      "falling": "Descendent"
+    }
+  },
+  "dateSelector": {
+    "selectDate": "Seleccionar data",
+    "today": "Avui"
+  }
+}

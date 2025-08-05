@@ -1,0 +1,119 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "confirm": "Confirm",
+    "today": "Today",
+    "date": "Date"
+  },
+  "app": {
+    "title": "Vital Balance Pro - Advanced Comparison",
+    "shortTitle": "Vital Balance Pro",
+    "description": "Professional version to compare biorhythms of multiple people. Group analysis and advanced recommendations.",
+    "name": "RhythmVital Pro",
+    "subtitle": "Advanced Biorhythm Comparison",
+    "version": "Professional Version",
+    "premium": "Premium",
+    "backToBasic": "← Basic Version",
+    "createdBy": "RhythmVital Pro • Created by Victor M.F. Avilan"
+  },
+  "tabs": {
+    "people": "People",
+    "details": "Details",
+    "comparison": "Comparison",
+    "recommendations": "Recommendations"
+  },
+  "people": {
+    "title": "People Management",
+    "addPerson": "Add Person",
+    "noPeople": "No people added",
+    "noPeopleDescription": "Add people to start comparing their biorhythms",
+    "name": "Name",
+    "birthDate": "Birth Date",
+    "birthPlace": "Birth Place",
+    "color": "Color",
+    "active": "Active",
+    "inactive": "Inactive",
+    "maxPeopleReached": "Maximum people reached",
+    "maxPeopleDescription": "You can compare up to 3 people simultaneously"
+  },
+  "details": {
+    "title": "Individual Details",
+    "description": "Complete information of all cycles for each active person",
+    "noActivePeople": "No active people",
+    "noActivePeopleDescription": "Select people in the \"People\" tab to see their complete details",
+    "showingDataFor": "Showing data for:",
+    "physical": "Physical",
+    "emotional": "Emotional",
+    "intellectual": "Intellectual",
+    "intuitive": "Intuitive",
+    "aesthetic": "Aesthetic",
+    "awareness": "Awareness",
+    "spiritual": "Spiritual",
+    "passion": "Passion",
+    "mastery": "Mastery",
+    "wisdom": "Wisdom"
+  },
+  "comparison": {
+    "title": "Biorhythm Comparison (31 days)",
+    "titleShort": "Comparison (31 days)",
+    "description": "15 days before and 15 days after the selected date.",
+    "todayMarker": "● Today",
+    "selectedDateMarker": "● Selected date",
+    "noPeopleToCompare": "No people to compare",
+    "noPeopleToCompareDescription": "Add at least 2 people in the \"People\" tab to start comparison",
+    "needMorePeople": "You need more people",
+    "needMorePeopleDescription": "Add at least one more person to make comparisons",
+    "comparisonTypes": {
+      "physical": "Physical",
+      "emotional": "Emotional",
+      "intellectual": "Intellectual",
+      "intuitive": "Intuitive",
+      "aesthetic": "Aesthetic",
+      "awareness": "Awareness",
+      "spiritual": "Spiritual",
+      "passion": "Passion",
+      "mastery": "Mastery",
+      "wisdom": "Wisdom"
+    }
+  },
+  "recommendations": {
+    "title": "Group Recommendations",
+    "description": "Personalized suggestions based on group biorhythm comparison",
+    "noRecommendations": "No recommendations available",
+    "noRecommendationsDescription": "Add people and select a comparison type to see personalized recommendations"
+  },
+  "biorhythms": {
+    "cycles": {
+      "physical": "Physical",
+      "emotional": "Emotional",
+      "intellectual": "Intellectual",
+      "intuitive": "Intuitive",
+      "aesthetic": "Aesthetic",
+      "awareness": "Awareness",
+      "spiritual": "Spiritual",
+      "passion": "Passion",
+      "mastery": "Mastery",
+      "wisdom": "Wisdom"
+    },
+    "phases": {
+      "high": "High",
+      "critical": "Critical",
+      "low": "Low",
+      "rising": "Rising",
+      "falling": "Falling"
+    }
+  },
+  "dateSelector": {
+    "selectDate": "Select date",
+    "today": "Today"
+  }
+}

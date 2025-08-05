@@ -1,0 +1,119 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "add": "Agregar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "close": "Cerrar",
+    "confirm": "Confirmar",
+    "today": "Hoy",
+    "date": "Fecha"
+  },
+  "app": {
+    "title": "Equilibrio Vital Pro - Comparación Avanzada",
+    "shortTitle": "Equilibrio Vital Pro",
+    "description": "Versión profesional para comparar biorritmos de múltiples personas. Análisis grupal y recomendaciones avanzadas.",
+    "name": "RitmoVital Pro",
+    "subtitle": "Comparación Avanzada de Biorritmos",
+    "version": "Versión Profesional",
+    "premium": "Premium",
+    "backToBasic": "← Versión Básica",
+    "createdBy": "RitmoVital Pro • Creado por Victor M.F. Avilan"
+  },
+  "tabs": {
+    "people": "Personas",
+    "details": "Detalles",
+    "comparison": "Comparación",
+    "recommendations": "Recomendaciones"
+  },
+  "people": {
+    "title": "Gestión de Personas",
+    "addPerson": "Agregar Persona",
+    "noPeople": "No hay personas agregadas",
+    "noPeopleDescription": "Agrega personas para comenzar a comparar sus biorritmos",
+    "name": "Nombre",
+    "birthDate": "Fecha de Nacimiento",
+    "birthPlace": "Lugar de Nacimiento",
+    "color": "Color",
+    "active": "Activa",
+    "inactive": "Inactiva",
+    "maxPeopleReached": "Máximo de personas alcanzado",
+    "maxPeopleDescription": "Puedes comparar hasta 3 personas simultáneamente"
+  },
+  "details": {
+    "title": "Detalles Individuales",
+    "description": "Información completa de todos los ciclos para cada persona activa",
+    "noActivePeople": "No hay personas activas",
+    "noActivePeopleDescription": "Selecciona personas en la pestaña \"Personas\" para ver sus detalles completos",
+    "showingDataFor": "Mostrando datos para:",
+    "physical": "Físico",
+    "emotional": "Emocional",
+    "intellectual": "Intelectual",
+    "intuitive": "Intuitivo",
+    "aesthetic": "Estético",
+    "awareness": "Conciencia",
+    "spiritual": "Espiritual",
+    "passion": "Pasión",
+    "mastery": "Maestría",
+    "wisdom": "Sabiduría"
+  },
+  "comparison": {
+    "title": "Comparación de Biorritmos (31 días)",
+    "titleShort": "Comparación (31 días)",
+    "description": "15 días antes y 15 días después de la fecha seleccionada.",
+    "todayMarker": "● Hoy",
+    "selectedDateMarker": "● Fecha seleccionada",
+    "noPeopleToCompare": "No hay personas para comparar",
+    "noPeopleToCompareDescription": "Agrega al menos 2 personas en la pestaña \"Personas\" para comenzar la comparación",
+    "needMorePeople": "Necesitas más personas",
+    "needMorePeopleDescription": "Agrega al menos una persona más para poder hacer comparaciones",
+    "comparisonTypes": {
+      "physical": "Físico",
+      "emotional": "Emocional", 
+      "intellectual": "Intelectual",
+      "intuitive": "Intuitivo",
+      "aesthetic": "Estético",
+      "awareness": "Conciencia",
+      "spiritual": "Espiritual",
+      "passion": "Pasión",
+      "mastery": "Maestría",
+      "wisdom": "Sabiduría"
+    }
+  },
+  "recommendations": {
+    "title": "Recomendaciones Grupales",
+    "description": "Sugerencias personalizadas basadas en la comparación de biorritmos del grupo",
+    "noRecommendations": "No hay recomendaciones disponibles",
+    "noRecommendationsDescription": "Agrega personas y selecciona un tipo de comparación para ver recomendaciones personalizadas"
+  },
+  "biorhythms": {
+    "cycles": {
+      "physical": "Físico",
+      "emotional": "Emocional",
+      "intellectual": "Intelectual",
+      "intuitive": "Intuitivo",
+      "aesthetic": "Estético",
+      "awareness": "Conciencia",
+      "spiritual": "Espiritual",
+      "passion": "Pasión",
+      "mastery": "Maestría",
+      "wisdom": "Sabiduría"
+    },
+    "phases": {
+      "high": "Alto",
+      "critical": "Crítico",
+      "low": "Bajo",
+      "rising": "Ascendente",
+      "falling": "Descendente"
+    }
+  },
+  "dateSelector": {
+    "selectDate": "Seleccionar fecha",
+    "today": "Hoy"
+  }
+}

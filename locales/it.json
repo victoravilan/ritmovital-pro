@@ -1,0 +1,119 @@
+{
+  "common": {
+    "loading": "Caricamento...",
+    "save": "Salva",
+    "cancel": "Annulla",
+    "delete": "Elimina",
+    "edit": "Modifica",
+    "add": "Aggiungi",
+    "back": "Indietro",
+    "next": "Avanti",
+    "previous": "Precedente",
+    "close": "Chiudi",
+    "confirm": "Conferma",
+    "today": "Oggi",
+    "date": "Data"
+  },
+  "app": {
+    "title": "Equilibrio Vitale Pro - Confronto Avanzato",
+    "shortTitle": "Equilibrio Vitale Pro",
+    "description": "Versione professionale per confrontare i bioritmi di più persone. Analisi di gruppo e raccomandazioni avanzate.",
+    "name": "RitmoVitale Pro",
+    "subtitle": "Confronto Avanzato di Bioritmi",
+    "version": "Versione Professionale",
+    "premium": "Premium",
+    "backToBasic": "← Versione Base",
+    "createdBy": "RitmoVitale Pro • Creato da Victor M.F. Avilan"
+  },
+  "tabs": {
+    "people": "Persone",
+    "details": "Dettagli",
+    "comparison": "Confronto",
+    "recommendations": "Raccomandazioni"
+  },
+  "people": {
+    "title": "Gestione Persone",
+    "addPerson": "Aggiungi Persona",
+    "noPeople": "Nessuna persona aggiunta",
+    "noPeopleDescription": "Aggiungi persone per iniziare a confrontare i loro bioritmi",
+    "name": "Nome",
+    "birthDate": "Data di Nascita",
+    "birthPlace": "Luogo di Nascita",
+    "color": "Colore",
+    "active": "Attiva",
+    "inactive": "Inattiva",
+    "maxPeopleReached": "Numero massimo di persone raggiunto",
+    "maxPeopleDescription": "Puoi confrontare fino a 3 persone simultaneamente"
+  },
+  "details": {
+    "title": "Dettagli Individuali",
+    "description": "Informazioni complete di tutti i cicli per ogni persona attiva",
+    "noActivePeople": "Nessuna persona attiva",
+    "noActivePeopleDescription": "Seleziona persone nella scheda \"Persone\" per vedere i loro dettagli completi",
+    "showingDataFor": "Mostrando dati per:",
+    "physical": "Fisico",
+    "emotional": "Emotivo",
+    "intellectual": "Intellettuale",
+    "intuitive": "Intuitivo",
+    "aesthetic": "Estetico",
+    "awareness": "Consapevolezza",
+    "spiritual": "Spirituale",
+    "passion": "Passione",
+    "mastery": "Maestria",
+    "wisdom": "Saggezza"
+  },
+  "comparison": {
+    "title": "Confronto Bioritmi (31 giorni)",
+    "titleShort": "Confronto (31 giorni)",
+    "description": "15 giorni prima e 15 giorni dopo la data selezionata.",
+    "todayMarker": "● Oggi",
+    "selectedDateMarker": "● Data selezionata",
+    "noPeopleToCompare": "Nessuna persona da confrontare",
+    "noPeopleToCompareDescription": "Aggiungi almeno 2 persone nella scheda \"Persone\" per iniziare il confronto",
+    "needMorePeople": "Hai bisogno di più persone",
+    "needMorePeopleDescription": "Aggiungi almeno un'altra persona per poter fare confronti",
+    "comparisonTypes": {
+      "physical": "Fisico",
+      "emotional": "Emotivo",
+      "intellectual": "Intellettuale",
+      "intuitive": "Intuitivo",
+      "aesthetic": "Estetico",
+      "awareness": "Consapevolezza",
+      "spiritual": "Spirituale",
+      "passion": "Passione",
+      "mastery": "Maestria",
+      "wisdom": "Saggezza"
+    }
+  },
+  "recommendations": {
+    "title": "Raccomandazioni di Gruppo",
+    "description": "Suggerimenti personalizzati basati sul confronto dei bioritmi del gruppo",
+    "noRecommendations": "Nessuna raccomandazione disponibile",
+    "noRecommendationsDescription": "Aggiungi persone e seleziona un tipo di confronto per vedere raccomandazioni personalizzate"
+  },
+  "biorhythms": {
+    "cycles": {
+      "physical": "Fisico",
+      "emotional": "Emotivo",
+      "intellectual": "Intellettuale",
+      "intuitive": "Intuitivo",
+      "aesthetic": "Estetico",
+      "awareness": "Consapevolezza",
+      "spiritual": "Spirituale",
+      "passion": "Passione",
+      "mastery": "Maestria",
+      "wisdom": "Saggezza"
+    },
+    "phases": {
+      "high": "Alto",
+      "critical": "Critico",
+      "low": "Basso",
+      "rising": "Crescente",
+      "falling": "Calante"
+    }
+  },
+  "dateSelector": {
+    "selectDate": "Seleziona data",
+    "today": "Oggi"
+  }
+}
