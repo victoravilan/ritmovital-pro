@@ -4,8 +4,8 @@
   "private": true,
   "description": "Equilibrio Vital Pro - Comparación Avanzada de Biorritmos",
   "scripts": {
-    "build": "NEXT_PUBLIC_APP_VERSION=pro NEXT_PUBLIC_ENABLE_PRO=true next build",
-    "dev": "NEXT_PUBLIC_APP_VERSION=pro NEXT_PUBLIC_ENABLE_PRO=true next dev",
+    "build": "next build",
+    "dev": "next dev",
     "lint": "next lint",
     "start": "next start"
   },
