@@ -131,7 +131,7 @@ export default function ProDashboard({ onBackToBasic, initialUser }: ProDashboar
         <div className="relative">
           {/* Back button */}
           {onBackToBasic && (
-            <div className="absolute top-0 left-0">
+            <div className="absolute top-0 left-0 z-20">
               <Button
                 onClick={onBackToBasic}
                 variant="outline"
@@ -143,7 +143,7 @@ export default function ProDashboard({ onBackToBasic, initialUser }: ProDashboar
           )}
 
           {/* Language Selector */}
-          <div className="absolute top-0 right-0">
+          <div className="absolute top-0 right-0 z-20">
             <LanguageSelector />
           </div>
 

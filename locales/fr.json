@@ -1,47 +1,45 @@
 {
-  "onboarding": {
-    "welcome": {
-      "title": "Bienvenue à RitmoVital!",
-      "description": "Découvrez vos cycles naturels et optimisez votre vie quotidienne",
-      "explanation": "Les biorythmes sont des cycles naturels qui influencent votre énergie physique, votre état émotionnel et votre capacité intellectuelle."
-    },
-    "personal": {
-      "title": "Informations Personnelles",
-      "description": "Nous avons besoin de quelques données de base pour calculer vos biorythmes"
-    },
-    "birthdate": {
-      "title": "Date de Naissance",
-      "description": "La date exacte est cruciale pour calculer vos cycles personnels"
-    },
-    "location": {
-      "title": "Origine et Localisation",
-      "description": "Cela nous aide à personnaliser les recommandations culturelles"
-    },
-    "fields": {
-      "name": "Nom",
-      "name_placeholder": "Votre nom",
-      "birth_date": "Date de Naissance",
-      "birth_time": "Heure de Naissance (optionnel)",
-      "birth_place": "Lieu de Naissance",
-      "birth_place_placeholder": "Ville, Pays",
-      "ethnicity": "Origine Ethnique",
-      "ethnicity_placeholder": "Sélectionnez votre origine"
-    },
-    "ethnicity": {
-      "latino": "Latino/Hispanique",
-      "european": "Européen",
-      "asian": "Asiatique",
-      "african": "Africain",
-      "other": "Autre"
-    },
-    "buttons": {
-      "previous": "Précédent",
-      "next": "Suivant",
-      "start": "Commencer"
-    },
-    "validation": {
-      "complete_fields": "Veuillez compléter tous les champs requis pour continuer."
-    }
+  "welcome": {
+    "title": "Bienvenue à RitmoVital!",
+    "description": "Découvrez vos cycles naturels et optimisez votre vie quotidienne",
+    "explanation": "Les biorythmes sont des cycles naturels qui influencent votre énergie physique, votre état émotionnel et votre capacité intellectuelle."
+  },
+  "personal": {
+    "title": "Informations Personnelles",
+    "description": "Nous avons besoin de quelques données de base pour calculer vos biorythmes"
+  },
+  "birthdate": {
+    "title": "Date de Naissance",
+    "description": "La date exacte est cruciale pour calculer vos cycles personnels"
+  },
+  "location": {
+    "title": "Origine et Localisation",
+    "description": "Cela nous aide à personnaliser les recommandations culturelles"
+  },
+  "fields": {
+    "name": "Nom",
+    "name_placeholder": "Votre nom",
+    "birth_date": "Date de Naissance",
+    "birth_time": "Heure de Naissance (optionnel)",
+    "birth_place": "Lieu de Naissance",
+    "birth_place_placeholder": "Ville, Pays",
+    "ethnicity": "Origine Ethnique",
+    "ethnicity_placeholder": "Sélectionnez votre origine"
+  },
+  "ethnicity": {
+    "latino": "Latino/Hispanique",
+    "european": "Européen",
+    "asian": "Asiatique",
+    "african": "Africain",
+    "other": "Autre"
+  },
+  "buttons": {
+    "previous": "Précédent",
+    "next": "Suivant",
+    "start": "Commencer"
+  },
+  "validation": {
+    "complete_fields": "Veuillez compléter tous les champs requis pour continuer."
   },
   "cycles": {
     "physical": "Physique",
