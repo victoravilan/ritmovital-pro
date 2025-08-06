@@ -2,8 +2,7 @@ import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import DynamicLayout from '@/components/dynamic-layout'
-import { TranslationsProvider } from '@/lib/translations-provider'
-import { GlobalTranslationWrapper } from '@/lib/global-translator'
+import { SimpleTranslationProvider } from '@/lib/simple-translations'
 import './global.css'
 
 export const metadata: Metadata = {
@@ -76,13 +75,11 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="167x167" href={process.env.NEXT_PUBLIC_APP_VERSION === 'pro' ? '/img/favicon ritmovital-pro.png' : '/img/icono-ritmoovital.png'} />
       </head>
       <body>
-        <TranslationsProvider>
-          <GlobalTranslationWrapper>
-            <DynamicLayout>
-              {children}
-            </DynamicLayout>
-          </GlobalTranslationWrapper>
-        </TranslationsProvider>
+        <SimpleTranslationProvider>
+          <DynamicLayout>
+            {children}
+          </DynamicLayout>
+        </SimpleTranslationProvider>
       </body>
     </html>
   )
