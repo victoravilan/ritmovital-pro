@@ -3,6 +3,7 @@ import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
 import DynamicLayout from '@/components/dynamic-layout'
 import { TranslationsProvider } from '@/lib/translations-provider'
+import { GlobalTranslationWrapper } from '@/lib/global-translator'
 import './global.css'
 
 export const metadata: Metadata = {
@@ -76,9 +77,11 @@ export default function RootLayout({
       </head>
       <body>
         <TranslationsProvider>
-          <DynamicLayout>
-            {children}
-          </DynamicLayout>
+          <GlobalTranslationWrapper>
+            <DynamicLayout>
+              {children}
+            </DynamicLayout>
+          </GlobalTranslationWrapper>
         </TranslationsProvider>
       </body>
     </html>
