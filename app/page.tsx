@@ -237,7 +237,7 @@ export default function BiorhythmApp() {
                 <CardContent>
                   <div className="text-3xl font-bold text-orange-400 mb-2">{biorhythmData.today.physical}%</div>
                   <Progress value={Math.abs(biorhythmData.today.physical)} className="h-2 mb-2 [&>div]:bg-orange-400" />
-                  <p className="text-sm text-slate-300">{state.physical.description}</p>
+                  <p className="text-sm text-slate-300"><AutoTranslateText>{state.physical.description}</AutoTranslateText></p>
                 </CardContent>
               </Card>
 
@@ -252,7 +252,7 @@ export default function BiorhythmApp() {
                 <CardContent>
                   <div className="text-3xl font-bold text-blue-400 mb-2">{biorhythmData.today.emotional}%</div>
                   <Progress value={Math.abs(biorhythmData.today.emotional)} className="h-2 mb-2 [&>div]:bg-blue-400" />
-                  <p className="text-sm text-slate-300">{state.emotional.description}</p>
+                  <p className="text-sm text-slate-300"><AutoTranslateText>{state.emotional.description}</AutoTranslateText></p>
                 </CardContent>
               </Card>
 
@@ -267,7 +267,7 @@ export default function BiorhythmApp() {
                 <CardContent>
                   <div className="text-3xl font-bold text-green-400 mb-2">{biorhythmData.today.intellectual}%</div>
                   <Progress value={Math.abs(biorhythmData.today.intellectual)} className="h-2 mb-2 [&>div]:bg-green-400" />
-                  <p className="text-sm text-slate-300">{state.intellectual.description}</p>
+                  <p className="text-sm text-slate-300"><AutoTranslateText>{state.intellectual.description}</AutoTranslateText></p>
                 </CardContent>
               </Card>
             </div>
@@ -278,19 +278,19 @@ export default function BiorhythmApp() {
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                   <CardTitle className="flex items-center text-lg sm:text-xl">
                     <Calendar className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                    <span className="hidden sm:inline">Gráfico de Biorritmos (31 días)</span>
-                    <span className="sm:hidden">Biorritmos (31 días)</span>
+                    <span className="hidden sm:inline"><AutoTranslateText>Gráfico de Biorritmos (31 días)</AutoTranslateText></span>
+                    <span className="sm:hidden"><AutoTranslateText>Biorritmos (31 días)</AutoTranslateText></span>
                   </CardTitle>
                   <div className="w-full sm:w-auto">
                     <DateSelector selectedDate={selectedDate} onDateChange={handleDateChange} />
                   </div>
                 </div>
                 <CardDescription className="mt-2 text-xs sm:text-sm">
-                  <span className="block sm:inline">15 días antes y 15 días después de la fecha seleccionada.</span>
+                  <span className="block sm:inline"><AutoTranslateText>15 días antes y 15 días después de la fecha seleccionada.</AutoTranslateText></span>
                   <span className="block sm:inline mt-1 sm:mt-0">
-                    <span className="text-amber-400 ml-0 sm:ml-2">● Hoy</span>
+                    <span className="text-amber-400 ml-0 sm:ml-2">● <AutoTranslateText>Hoy</AutoTranslateText></span>
                     {selectedDate.toDateString() !== new Date().toDateString() && (
-                      <span className="text-purple-400 ml-2">● Fecha seleccionada</span>
+                      <span className="text-purple-400 ml-2">● <AutoTranslateText>Fecha seleccionada</AutoTranslateText></span>
                     )}
                   </span>
                 </CardDescription>
@@ -304,7 +304,7 @@ export default function BiorhythmApp() {
                     <h4 className="text-base sm:text-lg font-semibold text-purple-400 mb-3 flex items-center">
                       <Info className="mr-2 h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
                       <span className="text-sm sm:text-base">
-                        Información para {selectedDate.toLocaleDateString("es-ES", {
+                        <AutoTranslateText>Información para</AutoTranslateText> {selectedDate.toLocaleDateString("es-ES", {
                           weekday: "long",
                           year: "numeric",
                           month: "long",
@@ -317,7 +317,7 @@ export default function BiorhythmApp() {
                         <div className="text-xl sm:text-2xl font-bold text-orange-400 mb-1">
                           {biorhythmData.selectedDate.physical}%
                         </div>
-                        <div className="text-xs sm:text-sm text-slate-300">Físico</div>
+                        <div className="text-xs sm:text-sm text-slate-300"><AutoTranslateText>Físico</AutoTranslateText></div>
                         <Progress
                           value={Math.abs(biorhythmData.selectedDate.physical)}
                           className="h-2 mt-2 [&>div]:bg-orange-400"
@@ -327,7 +327,7 @@ export default function BiorhythmApp() {
                         <div className="text-xl sm:text-2xl font-bold text-blue-400 mb-1">
                           {biorhythmData.selectedDate.emotional}%
                         </div>
-                        <div className="text-xs sm:text-sm text-slate-300">Emocional</div>
+                        <div className="text-xs sm:text-sm text-slate-300"><AutoTranslateText>Emocional</AutoTranslateText></div>
                         <Progress
                           value={Math.abs(biorhythmData.selectedDate.emotional)}
                           className="h-2 mt-2 [&>div]:bg-blue-400"
@@ -337,7 +337,7 @@ export default function BiorhythmApp() {
                         <div className="text-xl sm:text-2xl font-bold text-green-400 mb-1">
                           {biorhythmData.selectedDate.intellectual}%
                         </div>
-                        <div className="text-xs sm:text-sm text-slate-300">Intelectual</div>
+                        <div className="text-xs sm:text-sm text-slate-300"><AutoTranslateText>Intelectual</AutoTranslateText></div>
                         <Progress
                           value={Math.abs(biorhythmData.selectedDate.intellectual)}
                           className="h-2 mt-2 [&>div]:bg-green-400"
