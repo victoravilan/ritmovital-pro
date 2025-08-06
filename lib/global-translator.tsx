@@ -14,6 +14,7 @@ export function useGlobalTranslation() {
 
   useEffect(() => {
     if (currentLanguage === 'es') return
+    if (typeof window === 'undefined') return // Solo ejecutar en el cliente
 
     const translateAllText = async () => {
       setIsTranslating(true)

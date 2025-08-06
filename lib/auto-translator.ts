@@ -1,5 +1,7 @@
 "use client"
 
+import { useState, useEffect } from 'react'
+
 export type Language = 'es' | 'en' | 'ca' | 'fr' | 'ru' | 'it'
 
 // Cache para evitar traducir el mismo texto múltiples veces
@@ -97,8 +99,6 @@ export function useAutoTranslate() {
 }
 
 // Componente para texto auto-traducido
-import { useState, useEffect } from 'react'
-
 interface AutoTranslateTextProps {
   text: string
   language: Language
