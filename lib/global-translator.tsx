@@ -16,45 +16,137 @@ export function useGlobalTranslation() {
     if (currentLanguage === 'es') return
     if (typeof window === 'undefined') return // Solo ejecutar en el cliente
 
+    let translationCount = 0
+    const maxTranslations = 5 // Máximo 5 ejecuciones
+
     const translateAllText = async () => {
+      if (translationCount >= maxTranslations) return
+      
       setIsTranslating(true)
+      translationCount++
       
       try {
-        // Encontrar todos los elementos de texto en la página
-        const textNodes = getTextNodes(document.body)
+        console.log(`🔄 Ejecutando traducción global #${translationCount}`)
+        
+        // Encontrar todos los elementos de texto en la página (más agresivo)
+        const textNodes = getTextNodesAggressive(document.body)
+        
+        let translatedNodes = 0
         
         for (const node of textNodes) {
           const originalText = node.textContent?.trim()
           if (!originalText || originalText.length < 2) continue
           
-          // Verificar si es un texto que debe traducirse (no números, fechas, etc.)
-          if (shouldTranslate(originalText)) {
+          // Verificar si es un texto que debe traducirse (más permisivo)
+          if (shouldTranslateAggressive(originalText)) {
             try {
               const translatedText = await translateText(originalText, currentLanguage)
               if (translatedText !== originalText) {
                 node.textContent = translatedText
+                translatedNodes++
               }
             } catch (error) {
               console.error('Translation failed for:', originalText, error)
             }
           }
         }
+        
+        console.log(`✅ Traducción #${translationCount} completada: ${translatedNodes} nodos traducidos`)
+        
+        // Si es la primera ejecución, programar más ejecuciones
+        if (translationCount === 1) {
+          // Segunda ejecución después de 2 segundos (para contenido dinámico)
+          setTimeout(translateAllText, 2000)
+          // Tercera ejecución después de 5 segundos (para contenido tardío)
+          setTimeout(translateAllText, 5000)
+          // Cuarta ejecución después de 10 segundos (para asegurar todo)
+          setTimeout(translateAllText, 10000)
+        }
+        
       } catch (error) {
         console.error('Global translation failed:', error)
       } finally {
-        setIsTranslating(false)
+        // Solo ocultar el indicador después de la última ejecución
+        if (translationCount >= 3) {
+          setIsTranslating(false)
+        }
       }
     }
 
-    // Ejecutar traducción después de un pequeño delay para que el DOM se cargue
-    const timer = setTimeout(translateAllText, 1000)
-    return () => clearTimeout(timer)
+    // Ejecutar primera traducción inmediatamente
+    translateAllText()
+
+    // Observer para detectar cambios en el DOM y traducir contenido nuevo
+    const observer = new MutationObserver((mutations) => {
+      let hasNewText = false
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'childList') {
+          mutation.addedNodes.forEach((node) => {
+            if (node.nodeType === Node.TEXT_NODE || node.nodeType === Node.ELEMENT_NODE) {
+              hasNewText = true
+            }
+          })
+        }
+      })
+      
+      if (hasNewText && translationCount < maxTranslations) {
+        console.log('🔍 Detectado nuevo contenido, ejecutando traducción...')
+        setTimeout(translateAllText, 500)
+      }
+    })
+
+    // Observar cambios en todo el documento
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+      characterData: true
+    })
+
+    return () => {
+      observer.disconnect()
+    }
   }, [currentLanguage])
 
   return { isTranslating }
 }
 
-// Función para obtener todos los nodos de texto
+// Función AGRESIVA para obtener todos los nodos de texto (incluye más elementos)
+function getTextNodesAggressive(element: Element): Text[] {
+  const textNodes: Text[] = []
+  const walker = document.createTreeWalker(
+    element,
+    NodeFilter.SHOW_TEXT,
+    {
+      acceptNode: (node) => {
+        // Excluir solo scripts y estilos críticos
+        const parent = node.parentElement
+        if (!parent) return NodeFilter.FILTER_REJECT
+        
+        const tagName = parent.tagName.toLowerCase()
+        if (['script', 'style', 'noscript', 'code'].includes(tagName)) {
+          return NodeFilter.FILTER_REJECT
+        }
+        
+        // Incluir más tipos de texto (más permisivo)
+        const text = node.textContent?.trim()
+        if (!text || text.length < 1) {
+          return NodeFilter.FILTER_REJECT
+        }
+        
+        return NodeFilter.FILTER_ACCEPT
+      }
+    }
+  )
+
+  let node
+  while (node = walker.nextNode()) {
+    textNodes.push(node as Text)
+  }
+  
+  return textNodes
+}
+
+// Función para obtener todos los nodos de texto (versión original)
 function getTextNodes(element: Element): Text[] {
   const textNodes: Text[] = []
   const walker = document.createTreeWalker(
@@ -90,7 +182,29 @@ function getTextNodes(element: Element): Text[] {
   return textNodes
 }
 
-// Función para determinar si un texto debe traducirse
+// Función AGRESIVA para determinar si un texto debe traducirse (más permisiva)
+function shouldTranslateAggressive(text: string): boolean {
+  // No traducir si es solo números simples
+  if (/^\d+%?$/.test(text)) return false
+  
+  // No traducir URLs
+  if (text.startsWith('http')) return false
+  
+  // No traducir si es muy corto (solo 1 carácter)
+  if (text.length < 2) return false
+  
+  // No traducir si contiene solo símbolos especiales
+  if (/^[^\w\s\u00C0-\u017F]+$/.test(text)) return false
+  
+  // No traducir nombres propios conocidos (lista reducida)
+  const properNouns = ['RitmoVital', 'GitHub', 'Netlify', 'API']
+  if (properNouns.some(name => text.includes(name))) return false
+  
+  // TRADUCIR TODO LO DEMÁS (más agresivo)
+  return true
+}
+
+// Función para determinar si un texto debe traducirse (versión original)
 function shouldTranslate(text: string): boolean {
   // No traducir si es solo números
   if (/^\d+%?$/.test(text)) return false
