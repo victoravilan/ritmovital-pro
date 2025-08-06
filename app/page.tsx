@@ -18,6 +18,7 @@ import ProDashboard from "@/pro-version/pro-dashboard"
 import LanguageSelector from "@/components/ui/language-selector"
 import { useTranslations } from "@/lib/translations-provider"
 import TranslatedRecommendations from "@/components/translated-recommendations"
+import AutoTranslateText from "@/components/auto-translate-text"
 import {
   calculateBiorhythms,
   getBiorhythmState,
@@ -210,8 +211,8 @@ export default function BiorhythmApp() {
                 className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold"
               >
                 <Crown className="mr-2 h-4 w-4" />
-                <span className="hidden sm:inline">Agregar y comparar personas</span>
-                <span className="sm:hidden">Comparar</span>
+                <span className="hidden sm:inline"><AutoTranslateText>Agregar y comparar personas</AutoTranslateText></span>
+                <span className="sm:hidden"><AutoTranslateText>Comparar</AutoTranslateText></span>
               </Button>
             )}
             <Badge variant="outline" className="text-amber-400 border-amber-400">

@@ -1,6 +1,7 @@
 "use client"
 
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react'
+import { translateText } from './auto-translator'
 
 export type Language = 'es' | 'en' | 'ca' | 'fr' | 'ru' | 'it'
 
@@ -21,6 +22,7 @@ interface TranslationsContextType {
   currentLanguage: Language
   changeLanguage: (language: Language) => void
   t: (key: string, fallback?: string) => string
+  autoTranslate: (text: string) => Promise<string>
   isLoading: boolean
   getCurrentLanguageInfo: () => typeof LANGUAGES[Language]
   availableLanguages: typeof LANGUAGES
@@ -113,11 +115,10 @@ export function TranslationsProvider({ children }: { children: React.ReactNode }
     }
   }, [])
 
-  // Translation function with nested key support
+  // Translation function with nested key support and auto-translation fallback
   const t = useCallback((key: string, fallback?: string): string => {
     // If translations are still loading, return fallback or key
     if (isLoading || !translations || Object.keys(translations).length === 0) {
-      console.log('Translations not loaded yet:', { isLoading, translations })
       return fallback || key
     }
 
@@ -128,15 +129,27 @@ export function TranslationsProvider({ children }: { children: React.ReactNode }
       if (value && typeof value === 'object' && k in value) {
         value = value[k]
       } else {
-        console.log('Translation key not found:', key, 'in', translations)
+        // Translation key not found, use fallback or key
         return fallback || key
       }
     }
     
-    const result = typeof value === 'string' ? value : fallback || key
-    console.log('Translation result:', key, '->', result)
-    return result
+    return typeof value === 'string' ? value : fallback || key
   }, [translations, isLoading])
+
+  // Auto-translate function for any text
+  const autoTranslate = useCallback(async (text: string): Promise<string> => {
+    if (currentLanguage === 'es') {
+      return text
+    }
+    
+    try {
+      return await translateText(text, currentLanguage)
+    } catch (error) {
+      console.error('Auto-translation failed:', error)
+      return text
+    }
+  }, [currentLanguage])
 
   // Get current language info
   const getCurrentLanguageInfo = useCallback(() => {
@@ -147,6 +160,7 @@ export function TranslationsProvider({ children }: { children: React.ReactNode }
     currentLanguage,
     changeLanguage,
     t,
+    autoTranslate,
     isLoading,
     getCurrentLanguageInfo,
     availableLanguages: LANGUAGES
