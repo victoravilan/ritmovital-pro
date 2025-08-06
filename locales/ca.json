@@ -165,5 +165,71 @@
   "dateSelector": {
     "selectDate": "Seleccionar data",
     "today": "Avui"
+  },
+  "dashboard": {
+    "greeting": "Hola, {name}!",
+    "generalState": "Estat General: {score}%",
+    "addCompare": "Afegir i comparar persones",
+    "compare": "Comparar",
+    "physical": "Físic",
+    "emotional": "Emocional", 
+    "intellectual": "Intel·lectual",
+    "chartTitle": "Gràfic de Bioritmes (31 dies)",
+    "chartTitleShort": "Bioritmes (31 dies)",
+    "chartDescription": "15 dies abans i 15 dies després de la data seleccionada.",
+    "today": "Avui",
+    "selectedDate": "Data seleccionada",
+    "informationFor": "Informació per {date}",
+    "detailedRecommendations": "Recomanacions Detallades",
+    "detailedRecommendationsDesc": "Consells personalitzats basats en el teu estat actual i perfil",
+    "nutrition": "Nutrició",
+    "exercise": "Exercici",
+    "creativity": "Creativitat",
+    "wellness": "Benestar"
+  },
+  "recommendations": {
+    "nutrition": {
+      "title": "Alimentació Recomanada",
+      "idealFoods": "Aliments Ideals per Avui",
+      "schedules": "Horaris i Combinacions",
+      "proteins": "Proteïnes magres:",
+      "proteinsDesc": "Pollastre, peix, tofu i llegums per mantenir energia sostinguda",
+      "fruits": "Fruites cítriques:",
+      "fruitsDesc": "Taronges, llimones i pomelos rics en vitamina C per vitalitat",
+      "nuts": "Fruits secs:",
+      "nutsDesc": "Ametlles, nous i festucs per millorar la concentració",
+      "vegetables": "Vegetals verds:",
+      "vegetablesDesc": "Espinacs, bròquil i col kale carregats de nutrients essencials",
+      "grains": "Cereals integrals:",
+      "grainsDesc": "Quinoa, civada i arròs integral per energia d'alliberament lent",
+      "fats": "Greixos saludables:",
+      "fatsDesc": "Alvocat, oli d'oliva i llavors de chia per funció cerebral",
+      "hydration": "Hidratació:",
+      "hydrationDesc": "8-10 gots d'aigua, tes verds i aigua amb llimona per optimitzar metabolisme",
+      "breakfast": "Esmorzar (7-9 AM):",
+      "breakfastDesc": "Combina proteïnes amb carbohidrats complexos. Exemple: civada amb fruits vermells i ametlles.",
+      "midMorning": "Mig matí (10-11 AM):",
+      "midMorningDesc": "Fruita fresca amb un grapat de nous per mantenir energia estable.",
+      "lunch": "Dinar (12-2 PM):",
+      "lunchDesc": "Plat equilibrat: 50% vegetals, 25% proteïna magra, 25% cereals integrals.",
+      "snack": "Berenar (3-4 PM):",
+      "snackDesc": "Iogurt grec amb llavors o hummus amb vegetals crus.",
+      "dinner": "Sopar (6-8 PM):",
+      "dinnerDesc": "Lleuger però nutritiu, evita carbohidrats pesats 3 hores abans de dormir.",
+      "supplements": "Suplements:",
+      "supplementsDesc": "Considera vitamina D, omega-3 i magnesi segons el teu estat energètic actual."
+    },
+    "exercise": {
+      "title": "Activitat Física Personalitzada",
+      "content": "Recomanacions d'exercici personalitzades segons el teu estat físic actual."
+    },
+    "creativity": {
+      "title": "Activitats Creatives Personalitzades",
+      "content": "Activitats creatives adaptades a la teva capacitat intel·lectual actual."
+    },
+    "wellness": {
+      "title": "Benestar Emocional Integral",
+      "content": "Pràctiques de benestar segons el teu estat emocional actual."
+    }
   }
 }

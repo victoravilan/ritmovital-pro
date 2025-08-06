@@ -165,5 +165,71 @@
   "dateSelector": {
     "selectDate": "Seleziona data",
     "today": "Oggi"
+  },
+  "dashboard": {
+    "greeting": "Ciao, {name}!",
+    "generalState": "Stato Generale: {score}%",
+    "addCompare": "Aggiungi e confronta persone",
+    "compare": "Confronta",
+    "physical": "Fisico",
+    "emotional": "Emotivo", 
+    "intellectual": "Intellettuale",
+    "chartTitle": "Grafico dei Bioritmi (31 giorni)",
+    "chartTitleShort": "Bioritmi (31 giorni)",
+    "chartDescription": "15 giorni prima e 15 giorni dopo la data selezionata.",
+    "today": "Oggi",
+    "selectedDate": "Data selezionata",
+    "informationFor": "Informazioni per {date}",
+    "detailedRecommendations": "Raccomandazioni Dettagliate",
+    "detailedRecommendationsDesc": "Consigli personalizzati basati sul tuo stato attuale e profilo",
+    "nutrition": "Nutrizione",
+    "exercise": "Esercizio",
+    "creativity": "Creatività",
+    "wellness": "Benessere"
+  },
+  "recommendations": {
+    "nutrition": {
+      "title": "Alimentazione Raccomandata",
+      "idealFoods": "Alimenti Ideali per Oggi",
+      "schedules": "Orari e Combinazioni",
+      "proteins": "Proteine magre:",
+      "proteinsDesc": "Pollo, pesce, tofu e legumi per mantenere energia sostenuta",
+      "fruits": "Agrumi:",
+      "fruitsDesc": "Arance, limoni e pompelmi ricchi di vitamina C per vitalità",
+      "nuts": "Frutta secca:",
+      "nutsDesc": "Mandorle, noci e pistacchi per migliorare la concentrazione",
+      "vegetables": "Verdure verdi:",
+      "vegetablesDesc": "Spinaci, broccoli e cavolo riccio carichi di nutrienti essenziali",
+      "grains": "Cereali integrali:",
+      "grainsDesc": "Quinoa, avena e riso integrale per energia a rilascio lento",
+      "fats": "Grassi sani:",
+      "fatsDesc": "Avocado, olio d'oliva e semi di chia per la funzione cerebrale",
+      "hydration": "Idratazione:",
+      "hydrationDesc": "8-10 bicchieri d'acqua, tè verdi e acqua al limone per ottimizzare il metabolismo",
+      "breakfast": "Colazione (7-9):",
+      "breakfastDesc": "Combina proteine con carboidrati complessi. Esempio: avena con frutti di bosco e mandorle.",
+      "midMorning": "Metà mattina (10-11):",
+      "midMorningDesc": "Frutta fresca con una manciata di noci per mantenere energia stabile.",
+      "lunch": "Pranzo (12-14):",
+      "lunchDesc": "Piatto bilanciato: 50% verdure, 25% proteine magre, 25% cereali integrali.",
+      "snack": "Spuntino (15-16):",
+      "snackDesc": "Yogurt greco con semi o hummus con verdure crude.",
+      "dinner": "Cena (18-20):",
+      "dinnerDesc": "Leggera ma nutriente, evita carboidrati pesanti 3 ore prima di dormire.",
+      "supplements": "Integratori:",
+      "supplementsDesc": "Considera vitamina D, omega-3 e magnesio secondo il tuo stato energetico attuale."
+    },
+    "exercise": {
+      "title": "Attività Fisica Personalizzata",
+      "content": "Raccomandazioni di esercizio personalizzate secondo il tuo stato fisico attuale."
+    },
+    "creativity": {
+      "title": "Attività Creative Personalizzate",
+      "content": "Attività creative adattate alla tua capacità intellettuale attuale."
+    },
+    "wellness": {
+      "title": "Benessere Emotivo Integrale",
+      "content": "Pratiche di benessere secondo il tuo stato emotivo attuale."
+    }
   }
 }

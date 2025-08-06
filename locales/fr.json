@@ -165,5 +165,71 @@
   "dateSelector": {
     "selectDate": "Sélectionner la date",
     "today": "Aujourd'hui"
+  },
+  "dashboard": {
+    "greeting": "Bonjour, {name}!",
+    "generalState": "État Général: {score}%",
+    "addCompare": "Ajouter et comparer des personnes",
+    "compare": "Comparer",
+    "physical": "Physique",
+    "emotional": "Émotionnel", 
+    "intellectual": "Intellectuel",
+    "chartTitle": "Graphique des Biorythmes (31 jours)",
+    "chartTitleShort": "Biorythmes (31 jours)",
+    "chartDescription": "15 jours avant et 15 jours après la date sélectionnée.",
+    "today": "Aujourd'hui",
+    "selectedDate": "Date sélectionnée",
+    "informationFor": "Information pour {date}",
+    "detailedRecommendations": "Recommandations Détaillées",
+    "detailedRecommendationsDesc": "Conseils personnalisés basés sur votre état actuel et profil",
+    "nutrition": "Nutrition",
+    "exercise": "Exercice",
+    "creativity": "Créativité",
+    "wellness": "Bien-être"
+  },
+  "recommendations": {
+    "nutrition": {
+      "title": "Alimentation Recommandée",
+      "idealFoods": "Aliments Idéaux pour Aujourd'hui",
+      "schedules": "Horaires et Combinaisons",
+      "proteins": "Protéines maigres:",
+      "proteinsDesc": "Poulet, poisson, tofu et légumineuses pour maintenir une énergie soutenue",
+      "fruits": "Agrumes:",
+      "fruitsDesc": "Oranges, citrons et pamplemousses riches en vitamine C pour la vitalité",
+      "nuts": "Fruits à coque:",
+      "nutsDesc": "Amandes, noix et pistaches pour améliorer la concentration",
+      "vegetables": "Légumes verts:",
+      "vegetablesDesc": "Épinards, brocolis et chou kale chargés de nutriments essentiels",
+      "grains": "Céréales complètes:",
+      "grainsDesc": "Quinoa, avoine et riz brun pour une énergie à libération lente",
+      "fats": "Graisses saines:",
+      "fatsDesc": "Avocat, huile d'olive et graines de chia pour la fonction cérébrale",
+      "hydration": "Hydratation:",
+      "hydrationDesc": "8-10 verres d'eau, thés verts et eau citronnée pour optimiser le métabolisme",
+      "breakfast": "Petit-déjeuner (7-9h):",
+      "breakfastDesc": "Combinez protéines et glucides complexes. Exemple: avoine avec fruits rouges et amandes.",
+      "midMorning": "Milieu de matinée (10-11h):",
+      "midMorningDesc": "Fruit frais avec une poignée de noix pour maintenir une énergie stable.",
+      "lunch": "Déjeuner (12-14h):",
+      "lunchDesc": "Assiette équilibrée: 50% légumes, 25% protéine maigre, 25% céréales complètes.",
+      "snack": "Collation (15-16h):",
+      "snackDesc": "Yaourt grec avec graines ou houmous avec légumes crus.",
+      "dinner": "Dîner (18-20h):",
+      "dinnerDesc": "Léger mais nutritif, évitez les glucides lourds 3 heures avant le coucher.",
+      "supplements": "Suppléments:",
+      "supplementsDesc": "Considérez la vitamine D, les oméga-3 et le magnésium selon votre état énergétique actuel."
+    },
+    "exercise": {
+      "title": "Activité Physique Personnalisée",
+      "content": "Recommandations d'exercice personnalisées selon votre état physique actuel."
+    },
+    "creativity": {
+      "title": "Activités Créatives Personnalisées",
+      "content": "Activités créatives adaptées à votre capacité intellectuelle actuelle."
+    },
+    "wellness": {
+      "title": "Bien-être Émotionnel Intégral",
+      "content": "Pratiques de bien-être selon votre état émotionnel actuel."
+    }
   }
 }

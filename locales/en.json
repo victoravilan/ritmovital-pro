@@ -165,5 +165,71 @@
   "dateSelector": {
     "selectDate": "Select date",
     "today": "Today"
+  },
+  "dashboard": {
+    "greeting": "Hello, {name}!",
+    "generalState": "General State: {score}%",
+    "addCompare": "Add and compare people",
+    "compare": "Compare",
+    "physical": "Physical",
+    "emotional": "Emotional", 
+    "intellectual": "Intellectual",
+    "chartTitle": "Biorhythm Chart (31 days)",
+    "chartTitleShort": "Biorhythms (31 days)",
+    "chartDescription": "15 days before and 15 days after the selected date.",
+    "today": "Today",
+    "selectedDate": "Selected date",
+    "informationFor": "Information for {date}",
+    "detailedRecommendations": "Detailed Recommendations",
+    "detailedRecommendationsDesc": "Personalized advice based on your current state and profile",
+    "nutrition": "Nutrition",
+    "exercise": "Exercise",
+    "creativity": "Creativity",
+    "wellness": "Wellness"
+  },
+  "recommendations": {
+    "nutrition": {
+      "title": "Recommended Nutrition",
+      "idealFoods": "Ideal Foods for Today",
+      "schedules": "Schedules and Combinations",
+      "proteins": "Lean proteins:",
+      "proteinsDesc": "Chicken, fish, tofu and legumes to maintain sustained energy",
+      "fruits": "Citrus fruits:",
+      "fruitsDesc": "Oranges, lemons and grapefruits rich in vitamin C for vitality",
+      "nuts": "Nuts:",
+      "nutsDesc": "Almonds, walnuts and pistachios to improve concentration",
+      "vegetables": "Green vegetables:",
+      "vegetablesDesc": "Spinach, broccoli and kale loaded with essential nutrients",
+      "grains": "Whole grains:",
+      "grainsDesc": "Quinoa, oats and brown rice for slow-release energy",
+      "fats": "Healthy fats:",
+      "fatsDesc": "Avocado, olive oil and chia seeds for brain function",
+      "hydration": "Hydration:",
+      "hydrationDesc": "8-10 glasses of water, green teas and lemon water to optimize metabolism",
+      "breakfast": "Breakfast (7-9 AM):",
+      "breakfastDesc": "Combine proteins with complex carbohydrates. Example: oats with berries and almonds.",
+      "midMorning": "Mid-morning (10-11 AM):",
+      "midMorningDesc": "Fresh fruit with a handful of nuts to maintain stable energy.",
+      "lunch": "Lunch (12-2 PM):",
+      "lunchDesc": "Balanced plate: 50% vegetables, 25% lean protein, 25% whole grains.",
+      "snack": "Snack (3-4 PM):",
+      "snackDesc": "Greek yogurt with seeds or hummus with raw vegetables.",
+      "dinner": "Dinner (6-8 PM):",
+      "dinnerDesc": "Light but nutritious, avoid heavy carbohydrates 3 hours before sleep.",
+      "supplements": "Supplements:",
+      "supplementsDesc": "Consider vitamin D, omega-3 and magnesium according to your current energy state."
+    },
+    "exercise": {
+      "title": "Personalized Physical Activity",
+      "content": "Exercise recommendations personalized according to your current physical state."
+    },
+    "creativity": {
+      "title": "Personalized Creative Activities",
+      "content": "Creative activities adapted to your current intellectual capacity."
+    },
+    "wellness": {
+      "title": "Comprehensive Emotional Wellness",
+      "content": "Wellness practices according to your current emotional state."
+    }
   }
 }
