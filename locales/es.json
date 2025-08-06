@@ -67,13 +67,28 @@
   "app": {
     "title": "Equilibrio Vital Pro - Comparación Avanzada",
     "shortTitle": "Equilibrio Vital Pro",
-    "description": "Versión profesional para comparar biorritmos de múltiples personas. Análisis grupal y recomendaciones avanzadas.",
+    "description": "Descubre tus ciclos naturales y optimiza tu vida diaria",
     "name": "RitmoVital Pro",
     "subtitle": "Comparación Avanzada de Biorritmos",
     "version": "Versión Profesional",
     "premium": "Premium",
     "backToBasic": "← Versión Básica",
     "createdBy": "RitmoVital Pro • Creado por Victor M.F. Avilan"
+  },
+  "dashboard": {
+    "greeting": "¡Hola, {name}!",
+    "generalState": "Estado General: {score}%",
+    "addCompare": "Agregar y comparar personas",
+    "compare": "Comparar",
+    "physical": "Físico",
+    "emotional": "Emocional", 
+    "intellectual": "Intelectual",
+    "chartTitle": "Gráfico de Biorritmos (31 días)",
+    "chartTitleShort": "Biorritmos (31 días)",
+    "chartDescription": "15 días antes y 15 días después de la fecha seleccionada.",
+    "today": "Hoy",
+    "selectedDate": "Fecha seleccionada",
+    "informationFor": "Información para {date}"
   },
   "tabs": {
     "people": "Personas",

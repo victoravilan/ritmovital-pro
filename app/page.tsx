@@ -16,6 +16,7 @@ import RecommendationsPanel from "@/components/recommendations-panel"
 import DashboardSkeleton from "@/components/dashboard-skeleton"
 import ProDashboard from "@/pro-version/pro-dashboard"
 import LanguageSelector from "@/components/ui/language-selector"
+import { useTranslations } from "@/lib/translations-provider"
 import {
   calculateBiorhythms,
   getBiorhythmState,
@@ -24,6 +25,7 @@ import {
 } from "@/lib/biorhythm-calculator"
 
 export default function BiorhythmApp() {
+  const { t } = useTranslations()
   const [userProfile, setUserProfile] = useState<UserProfile | null>(null)
   const [biorhythmData, setBiorhythmData] = useState<BiorhythmData | null>(null)
   const [selectedDate, setSelectedDate] = useState<Date>(new Date())
@@ -174,7 +176,7 @@ export default function BiorhythmApp() {
             RitmoVital
           </h1>
           <p className="text-xl md:text-2xl text-amber-300 drop-shadow-lg">
-            Descubre tus ciclos naturales
+            {t('app.description', 'Descubre tus ciclos naturales')}
           </p>
         </div>
 
@@ -188,7 +190,7 @@ export default function BiorhythmApp() {
               </AvatarFallback>
             </Avatar>
             <div>
-              <h2 className="text-2xl font-bold">¡Hola, {userProfile.name}!</h2>
+              <h2 className="text-2xl font-bold">{t('dashboard.greeting', '¡Hola, {name}!').replace('{name}', userProfile.name)}</h2>
               <p className="text-slate-300">
                 {new Date().toLocaleDateString("es-ES", {
                   weekday: "long",
@@ -227,7 +229,7 @@ export default function BiorhythmApp() {
                 <CardHeader className="pb-2">
                   <CardTitle className="flex items-center text-orange-400">
                     <Activity className="mr-2 h-5 w-5" />
-                    Físico
+                    {t('dashboard.physical', 'Físico')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -242,7 +244,7 @@ export default function BiorhythmApp() {
                 <CardHeader className="pb-2">
                   <CardTitle className="flex items-center text-blue-400">
                     <Heart className="mr-2 h-5 w-5" />
-                    Emocional
+                    {t('dashboard.emotional', 'Emocional')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -257,7 +259,7 @@ export default function BiorhythmApp() {
                 <CardHeader className="pb-2">
                   <CardTitle className="flex items-center text-green-400">
                     <Brain className="mr-2 h-5 w-5" />
-                    Intelectual
+                    {t('dashboard.intellectual', 'Intelectual')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
