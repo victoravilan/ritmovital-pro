@@ -88,7 +88,76 @@
     "chartDescription": "15 días antes y 15 días después de la fecha seleccionada.",
     "today": "Hoy",
     "selectedDate": "Fecha seleccionada",
-    "informationFor": "Información para {date}"
+    "informationFor": "Información para {date}",
+    "detailedRecommendations": "Recomendaciones Detalladas",
+    "detailedRecommendationsDesc": "Consejos personalizados basados en tu estado actual y perfil",
+    "nutrition": "Nutrición",
+    "exercise": "Ejercicio",
+    "creativity": "Creatividad",
+    "wellness": "Bienestar",
+    "physicalStates": {
+      "high": "Energía física alta",
+      "moderate": "Energía física moderada",
+      "low": "Energía física baja",
+      "critical": "Momento crítico físico"
+    },
+    "emotionalStates": {
+      "high": "Estado emocional positivo",
+      "moderate": "Estado emocional estable",
+      "low": "Estado emocional sensible",
+      "critical": "Momento crítico emocional"
+    },
+    "intellectualStates": {
+      "high": "Capacidad intelectual alta",
+      "moderate": "Capacidad intelectual normal",
+      "low": "Necesitas descanso mental",
+      "critical": "Momento crítico intelectual"
+    }
+  },
+  "recommendations": {
+    "nutrition": {
+      "title": "Alimentación Recomendada",
+      "idealFoods": "Alimentos Ideales para Hoy",
+      "schedules": "Horarios y Combinaciones",
+      "proteins": "Proteínas magras:",
+      "proteinsDesc": "Pollo, pescado, tofu y legumbres para mantener energía sostenida",
+      "fruits": "Frutas cítricas:",
+      "fruitsDesc": "Naranjas, limones y pomelos ricos en vitamina C para vitalidad",
+      "nuts": "Frutos secos:",
+      "nutsDesc": "Almendras, nueces y pistachos para mejorar la concentración",
+      "vegetables": "Vegetales verdes:",
+      "vegetablesDesc": "Espinacas, brócoli y kale cargados de nutrientes esenciales",
+      "grains": "Granos integrales:",
+      "grainsDesc": "Quinoa, avena y arroz integral para energía de liberación lenta",
+      "fats": "Grasas saludables:",
+      "fatsDesc": "Aguacate, aceite de oliva y semillas de chía para función cerebral",
+      "hydration": "Hidratación:",
+      "hydrationDesc": "8-10 vasos de agua, tés verdes y agua con limón para optimizar metabolismo",
+      "breakfast": "Desayuno (7-9 AM):",
+      "breakfastDesc": "Combina proteínas con carbohidratos complejos. Ejemplo: avena con frutos rojos y almendras.",
+      "midMorning": "Media mañana (10-11 AM):",
+      "midMorningDesc": "Fruta fresca con un puñado de nueces para mantener energía estable.",
+      "lunch": "Almuerzo (12-2 PM):",
+      "lunchDesc": "Plato balanceado: 50% vegetales, 25% proteína magra, 25% granos integrales.",
+      "snack": "Merienda (3-4 PM):",
+      "snackDesc": "Yogur griego con semillas o hummus con vegetales crudos.",
+      "dinner": "Cena (6-8 PM):",
+      "dinnerDesc": "Ligera pero nutritiva, evita carbohidratos pesados 3 horas antes de dormir.",
+      "supplements": "Suplementos:",
+      "supplementsDesc": "Considera vitamina D, omega-3 y magnesio según tu estado energético actual."
+    },
+    "exercise": {
+      "title": "Actividad Física Personalizada",
+      "content": "Recomendaciones de ejercicio personalizadas según tu estado físico actual."
+    },
+    "creativity": {
+      "title": "Actividades Creativas Personalizadas",
+      "content": "Actividades creativas adaptadas a tu capacidad intelectual actual."
+    },
+    "wellness": {
+      "title": "Bienestar Emocional Integral",
+      "content": "Prácticas de bienestar según tu estado emocional actual."
+    }
   },
   "tabs": {
     "people": "Personas",

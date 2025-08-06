@@ -17,6 +17,7 @@ import DashboardSkeleton from "@/components/dashboard-skeleton"
 import ProDashboard from "@/pro-version/pro-dashboard"
 import LanguageSelector from "@/components/ui/language-selector"
 import { useTranslations } from "@/lib/translations-provider"
+import TranslatedRecommendations from "@/components/translated-recommendations"
 import {
   calculateBiorhythms,
   getBiorhythmState,
@@ -214,7 +215,7 @@ export default function BiorhythmApp() {
               </Button>
             )}
             <Badge variant="outline" className="text-amber-400 border-amber-400">
-              Estado General: {overallScore}%
+              {t('dashboard.generalState', 'Estado General: {score}%').replace('{score}', overallScore.toString())}
             </Badge>
           </div>
         </div>
@@ -364,63 +365,36 @@ export default function BiorhythmApp() {
         {/* Detailed Recommendations */}
         <Card className="bg-slate-800/50 border-slate-700">
           <CardHeader>
-            <CardTitle>Recomendaciones Detalladas</CardTitle>
-            <CardDescription>Consejos personalizados basados en tu estado actual y perfil</CardDescription>
+            <CardTitle>{t('dashboard.detailedRecommendations', 'Recomendaciones Detalladas')}</CardTitle>
+            <CardDescription>{t('dashboard.detailedRecommendationsDesc', 'Consejos personalizados basados en tu estado actual y perfil')}</CardDescription>
           </CardHeader>
           <CardContent>
             <Tabs defaultValue="nutrition" className="w-full">
               <TabsList className="grid w-full grid-cols-4 bg-slate-700">
                 <TabsTrigger value="nutrition" className="flex items-center gap-1">
                   <Utensils className="h-4 w-4" />
-                  Nutrición
+                  {t('dashboard.nutrition', 'Nutrición')}
                 </TabsTrigger>
                 <TabsTrigger value="exercise" className="flex items-center gap-1">
                   <Dumbbell className="h-4 w-4" />
-                  Ejercicio
+                  {t('dashboard.exercise', 'Ejercicio')}
                 </TabsTrigger>
                 <TabsTrigger value="creativity" className="flex items-center gap-1">
                   <Palette className="h-4 w-4" />
-                  Creatividad
+                  {t('dashboard.creativity', 'Creatividad')}
                 </TabsTrigger>
                 <TabsTrigger value="wellness" className="flex items-center gap-1">
                   <Smile className="h-4 w-4" />
-                  Bienestar
+                  {t('dashboard.wellness', 'Bienestar')}
                 </TabsTrigger>
               </TabsList>
 
               <TabsContent value="nutrition" className="mt-4">
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-amber-400">Alimentación Recomendada</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <Card className="bg-slate-700/50">
-                      <CardContent className="p-4">
-                        <h4 className="font-semibold mb-3 text-white">Alimentos Ideales para Hoy</h4>
-                        <ul className="text-sm space-y-2 text-white">
-                          <li>• <strong>Proteínas magras:</strong> Pollo, pescado, tofu y legumbres para mantener energía sostenida</li>
-                          <li>• <strong>Frutas cítricas:</strong> Naranjas, limones y pomelos ricos en vitamina C para vitalidad</li>
-                          <li>• <strong>Frutos secos:</strong> Almendras, nueces y pistachos para mejorar la concentración</li>
-                          <li>• <strong>Vegetales verdes:</strong> Espinacas, brócoli y kale cargados de nutrientes esenciales</li>
-                          <li>• <strong>Granos integrales:</strong> Quinoa, avena y arroz integral para energía de liberación lenta</li>
-                          <li>• <strong>Grasas saludables:</strong> Aguacate, aceite de oliva y semillas de chía para función cerebral</li>
-                          <li>• <strong>Hidratación:</strong> 8-10 vasos de agua, tés verdes y agua con limón para optimizar metabolismo</li>
-                        </ul>
-                      </CardContent>
-                    </Card>
-                    <Card className="bg-slate-700/50">
-                      <CardContent className="p-4">
-                        <h4 className="font-semibold mb-3 text-white">Horarios y Combinaciones</h4>
-                        <div className="text-sm space-y-2 text-white">
-                          <p><strong>Desayuno (7-9 AM):</strong> Combina proteínas con carbohidratos complejos. Ejemplo: avena con frutos rojos y almendras.</p>
-                          <p><strong>Media mañana (10-11 AM):</strong> Fruta fresca con un puñado de nueces para mantener energía estable.</p>
-                          <p><strong>Almuerzo (12-2 PM):</strong> Plato balanceado: 50% vegetales, 25% proteína magra, 25% granos integrales.</p>
-                          <p><strong>Merienda (3-4 PM):</strong> Yogur griego con semillas o hummus con vegetales crudos.</p>
-                          <p><strong>Cena (6-8 PM):</strong> Ligera pero nutritiva, evita carbohidratos pesados 3 horas antes de dormir.</p>
-                          <p><strong>Suplementos:</strong> Considera vitamina D, omega-3 y magnesio según tu estado energético actual.</p>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </div>
+                <TranslatedRecommendations 
+                  type="nutrition" 
+                  physicalState={biorhythmData.today.physical}
+                  intellectualState={biorhythmData.today.intellectual}
+                />
               </TabsContent>
 
               <TabsContent value="exercise" className="mt-4">
